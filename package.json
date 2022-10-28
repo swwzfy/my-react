@@ -133,17 +133,17 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": "css"
+        }
+      ]
     ]
   },
-  "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "antd",
-        "style": "css"
-      }
-    ]
-  ],
   "devDependencies": {
     "babel-plugin-import": "^1.13.5",
     "less": "^4.1.3",

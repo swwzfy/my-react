@@ -1,5 +1,10 @@
+import { Button } from 'antd'
+
 function App() {
-    return <div className="App">React-App5</div>
+    return <div className="App">
+        <h1>React-App5</h1>
+        <Button type="primary">Button</Button>
+    </div>
 }
 
 export default App;
