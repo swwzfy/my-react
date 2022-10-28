@@ -8,7 +8,7 @@ function Login() {
 
     return (
         <div className="P-login">
-            <Header />
+            <Header title="login" info={() => { console.log('info:login') }} />
             <div className="ipt-con">
                 <Input placeholder="账号" />
             </div>
