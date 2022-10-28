@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import { Button, Input } from 'antd'
 import './login.styl'
 
 function Login() {
+    const navigate = useNavigate()
 
     return (
         <div className="P-login">
@@ -12,7 +14,7 @@ function Login() {
                 <Input.Password placeholder="密码" />
             </div>
             <div className="ipt-con">
-                <Button type="primary" block={true}>
+                <Button type="primary" block={true} onClick={() => { navigate('/home') }}>
                     登录
                 </Button>
             </div>
