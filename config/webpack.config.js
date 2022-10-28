@@ -171,6 +171,22 @@ module.exports = function (webpackEnv) {
       },
     ].filter(Boolean);
     if (preProcessor) {
+      let preProcessorOptions = {
+        sourceMap: true,
+      }
+      if (preProcessor === "less-loader"){
+        preProcessorOptions = {
+          sourceMap: true,
+          //自定义主题
+          lessOptions:{
+            modifyVars: {
+              // 自定义全局主色，绿色
+              'primary-color': ' #67C23A',
+            },
+            javascriptEnabled: true,
+          },
+        }
+      }
       loaders.push(
         {
           loader: require.resolve('resolve-url-loader'),
